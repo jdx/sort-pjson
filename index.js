@@ -32,5 +32,10 @@ module.exports = input => {
     out[key] = pjson[key]
   }
 
+  // sort some sub items alphabetically
+  config.sortedSubItems.forEach(function (key) {
+    if (out[key]) out[key] = sortAlphabetically(out[key])
+  })
+
   return out
 }

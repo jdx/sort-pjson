@@ -2,12 +2,19 @@
   "name": "sort-pjson",
   "version": "1.0.1",
   "author": "Jeff Dickey",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "dependencies": {
     "fixpack": "^2.3.1"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.15.0",
-    "eslint-config-dxcli": "^1.0.1"
+    "eslint-config-dxcli": "^1.1.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1"
   },
   "files": [
     "/index.js"
