@@ -1,7 +1,7 @@
 {
   "name": "sort-pjson",
   "description": "sort package.json like fixpack but without messing with files",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Jeff Dickey",
   "dependencies": {
     "fixpack": "^2.3.1"
