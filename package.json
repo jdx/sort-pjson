@@ -1,25 +1,49 @@
 {
   "name": "sort-pjson",
+  "description": "sort package.json like fixpack but without messing with files",
   "version": "1.0.1",
   "author": "Jeff Dickey",
-  "engines": {
-    "node": ">=8.0.0"
-  },
   "dependencies": {
     "fixpack": "^2.3.1"
   },
   "devDependencies": {
+    "@dxcli/dev": "^1.1.0",
+    "@dxcli/dev-semantic-release": "^0.0.3",
+    "@dxcli/dev-test": "^0.0.1",
     "chai": "^4.1.2",
     "eslint": "^4.15.0",
-    "eslint-config-dxcli": "^1.1.0",
+    "eslint-config-dxcli": "^1.1.3",
     "eslint-plugin-mocha": "^4.11.0",
+    "husky": "^0.14.3",
     "mocha": "^4.1.0",
     "nyc": "^11.4.1"
+  },
+  "dxcli": {
+    "workflows": {
+      "test": [
+        "eslint .",
+        "commitlint --from master",
+        "mocha \"test/**/*.js\""
+      ],
+      "lint": [
+        "eslint .",
+        "commitlint --from master"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "files": [
     "/index.js"
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/jdxcode/sort-pjson"
+  "repository": "https://github.com/jdxcode/sort-pjson",
+  "scripts": {
+    "test": "mocha test \"**/*.test.ts\"",
+    "lint": "dxcli-dev lint",
+    "precommit": "dxcli-dev lint",
+    "commitmsg": "dxcli-dev-commitmsg"
+  }
 }
