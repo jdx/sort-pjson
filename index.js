@@ -1,6 +1,6 @@
 // most of this is taken from fixpack
 
-const config = require('fixpack/config.json')
+const config = require('@oclif/fixpack/config.json')
 
 function sortAlphabetically(object) {
   if (Array.isArray(object)) {
